@@ -74,21 +74,21 @@ const Index = () => {
       <HeroSection />
 
       {/* Features Section */}
-      <section className="py-20 px-6">
+      <section className="py-24 px-6">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-4 bg-accent/20 text-accent border-accent/30">
-              <Brain className="w-4 h-4 mr-2" />
-              Smart Efficiency Features
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="text-center mb-20">
+            <div className="bg-surface shadow-elevation-1 rounded-full px-6 py-3 inline-flex items-center mb-6">
+              <Brain className="w-5 h-5 mr-3 text-primary" />
+              <span className="text-primary font-medium">Smart Efficiency Features</span>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-bold mb-8 text-foreground">
               Intelligent by Design,
               <br />
               <span className="bg-gradient-primary bg-clip-text text-transparent">
                 Sustainable by Nature
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Every feature is designed to maximize your productivity while minimizing environmental impact.
             </p>
           </div>
@@ -106,59 +106,59 @@ const Index = () => {
       </section>
 
       {/* Daily Limits Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-card/30 to-background">
+      <section className="py-24 px-6 bg-surface-variant">
         <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-8">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-5xl font-bold mb-12">
               Your Personal
               <span className="bg-gradient-energy bg-clip-text text-transparent"> Energy Budget</span>
             </h2>
             
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6">
-                <div className="w-16 h-16 bg-energy/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <Zap className="w-8 h-8 text-energy" />
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              <div className="bg-surface shadow-elevation-2 rounded-3xl p-8 hover:shadow-elevation-3 transition-all duration-300">
+                <div className="w-20 h-20 bg-energy/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                  <Zap className="w-10 h-10 text-energy" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Energy Credits</h3>
-                <p className="text-muted-foreground mb-4">
+                <h3 className="text-2xl font-semibold mb-3">Energy Credits</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
                   Computational load converted to tangible kWh measurements
                 </p>
                 <EnergyMeter energyValue={65} waterValue={0} />
               </div>
 
-              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6">
-                <div className="w-16 h-16 bg-water/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <Droplets className="w-8 h-8 text-water" />
+              <div className="bg-surface shadow-elevation-2 rounded-3xl p-8 hover:shadow-elevation-3 transition-all duration-300">
+                <div className="w-20 h-20 bg-water/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                  <Droplets className="w-10 h-10 text-water" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Water Drops</h3>
-                <p className="text-muted-foreground mb-4">
+                <h3 className="text-2xl font-semibold mb-3">Water Drops</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
                   Cooling and processing water consumption tracking
                 </p>
                 <EnergyMeter energyValue={0} waterValue={45} />
               </div>
 
-              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6">
-                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <Award className="w-8 h-8 text-primary" />
+              <div className="bg-surface shadow-elevation-2 rounded-3xl p-8 hover:shadow-elevation-3 transition-all duration-300">
+                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                  <Award className="w-10 h-10 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Efficiency Multiplier</h3>
-                <p className="text-muted-foreground mb-4">
+                <h3 className="text-2xl font-semibold mb-3">Efficiency Multiplier</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
                   Earn bonus credits through sustainable usage patterns
                 </p>
-                <div className="text-3xl font-bold text-primary">2.4x</div>
+                <div className="text-4xl font-bold text-primary">2.4x</div>
               </div>
             </div>
 
-            <div className="bg-card/30 border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-semibold mb-6">Community Impact</h3>
-              <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-surface shadow-elevation-2 rounded-3xl p-10">
+              <h3 className="text-3xl font-semibold mb-8">Community Impact</h3>
+              <div className="grid md:grid-cols-2 gap-12">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-energy mb-2">2.3 MWh</div>
-                  <p className="text-muted-foreground">Energy saved by our community this month</p>
+                  <div className="text-5xl font-bold text-energy mb-3">2.3 MWh</div>
+                  <p className="text-muted-foreground text-lg">Energy saved by our community this month</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-water mb-2">847K</div>
-                  <p className="text-muted-foreground">Gallons of water conserved</p>
+                  <div className="text-5xl font-bold text-water mb-3">847K</div>
+                  <p className="text-muted-foreground text-lg">Gallons of water conserved</p>
                 </div>
               </div>
             </div>
@@ -167,72 +167,71 @@ const Index = () => {
       </section>
 
       {/* Behavioral Nudges Section */}
-      <section className="py-20 px-6">
+      <section className="py-24 px-6">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl font-bold mb-8">
               <span className="bg-gradient-primary bg-clip-text text-transparent">Gentle Guidance</span>
               <br />
               Towards Better Habits
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Subtle nudges that help you develop more sustainable AI usage patterns without compromising your workflow.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:shadow-glow-primary transition-all duration-300 hover:scale-105">
-              <Target className="w-8 h-8 text-primary mb-4" />
-              <h3 className="font-semibold mb-2">Query Quality Scoring</h3>
-              <p className="text-sm text-muted-foreground">Rate prompts before processing with improvement tips</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-surface shadow-elevation-1 rounded-2xl p-8 hover:shadow-elevation-3 transition-all duration-300 hover:-translate-y-1">
+              <Target className="w-12 h-12 text-primary mb-6" />
+              <h3 className="text-xl font-semibold mb-3">Query Quality Scoring</h3>
+              <p className="text-muted-foreground leading-relaxed">Rate prompts before processing with improvement tips</p>
             </div>
 
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:shadow-glow-primary transition-all duration-300 hover:scale-105">
-              <Clock className="w-8 h-8 text-accent mb-4" />
-              <h3 className="font-semibold mb-2">Mindful Pausing</h3>
-              <p className="text-sm text-muted-foreground">Brief delay with impact preview for expensive operations</p>
+            <div className="bg-surface shadow-elevation-1 rounded-2xl p-8 hover:shadow-elevation-3 transition-all duration-300 hover:-translate-y-1">
+              <Clock className="w-12 h-12 text-accent mb-6" />
+              <h3 className="text-xl font-semibold mb-3">Mindful Pausing</h3>
+              <p className="text-muted-foreground leading-relaxed">Brief delay with impact preview for expensive operations</p>
             </div>
 
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:shadow-glow-primary transition-all duration-300 hover:scale-105">
-              <BarChart3 className="w-8 h-8 text-energy mb-4" />
-              <h3 className="font-semibold mb-2">Usage Trends</h3>
-              <p className="text-sm text-muted-foreground">Weekly reports on efficiency improvements and impact</p>
+            <div className="bg-surface shadow-elevation-1 rounded-2xl p-8 hover:shadow-elevation-3 transition-all duration-300 hover:-translate-y-1">
+              <BarChart3 className="w-12 h-12 text-energy mb-6" />
+              <h3 className="text-xl font-semibold mb-3">Usage Trends</h3>
+              <p className="text-muted-foreground leading-relaxed">Weekly reports on efficiency improvements and impact</p>
             </div>
 
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:shadow-glow-primary transition-all duration-300 hover:scale-105">
-              <Users className="w-8 h-8 text-water mb-4" />
-              <h3 className="font-semibold mb-2">Community Challenges</h3>
-              <p className="text-sm text-muted-foreground">Collective goals for environmental impact reduction</p>
+            <div className="bg-surface shadow-elevation-1 rounded-2xl p-8 hover:shadow-elevation-3 transition-all duration-300 hover:-translate-y-1">
+              <Users className="w-12 h-12 text-water mb-6" />
+              <h3 className="text-xl font-semibold mb-3">Community Challenges</h3>
+              <p className="text-muted-foreground leading-relaxed">Collective goals for environmental impact reduction</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-primary relative overflow-hidden">
-        <div className="absolute inset-0 bg-background/10" />
+      <section className="py-24 px-6 bg-gradient-primary relative overflow-hidden">
+        <div className="absolute inset-0 bg-surface/5" />
         <div className="container mx-auto relative z-10">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary-foreground">
+          <div className="text-center max-w-4xl mx-auto">
+            <h2 className="text-5xl md:text-6xl font-bold mb-8 text-primary-foreground">
               Ready to Transform
               <br />
               How You Use AI?
             </h2>
-            <p className="text-xl text-primary-foreground/80 mb-8">
+            <p className="text-2xl text-primary-foreground/90 mb-12 leading-relaxed">
               Join thousands of conscious AI users who are reducing their environmental footprint while achieving better results.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button 
                 size="lg" 
-                variant="secondary"
-                className="bg-background hover:bg-background/90 text-foreground shadow-glow-primary"
+                className="bg-surface hover:bg-surface/90 text-foreground shadow-elevation-3 px-8 py-4 text-lg font-semibold rounded-full"
               >
                 Start Free Trial
               </Button>
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+                className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-4 text-lg font-semibold rounded-full"
               >
                 View Pricing
               </Button>

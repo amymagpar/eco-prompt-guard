@@ -52,6 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				/* Material Design 3 Surface Colors */
+				surface: {
+					DEFAULT: 'hsl(var(--surface))',
+					variant: 'hsl(var(--surface-variant))',
+					container: 'hsl(var(--surface-container))',
+					'container-high': 'hsl(var(--surface-container-high))',
+					'container-highest': 'hsl(var(--surface-container-highest))'
+				},
 				energy: {
 					DEFAULT: 'hsl(var(--energy))',
 					foreground: 'hsl(var(--energy-foreground))'
@@ -78,9 +86,10 @@ export default {
 				'gradient-bg': 'var(--gradient-bg)'
 			},
 			boxShadow: {
-				'glow-primary': 'var(--glow-primary)',
-				'glow-energy': 'var(--glow-energy)',
-				'glow-water': 'var(--glow-water)'
+				'elevation-1': 'var(--elevation-1)',
+				'elevation-2': 'var(--elevation-2)',
+				'elevation-3': 'var(--elevation-3)',
+				'elevation-4': 'var(--elevation-4)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

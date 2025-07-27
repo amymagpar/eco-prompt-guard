@@ -8,54 +8,62 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Futuristic AI theme colors */
-    --background: 220 15% 8%;
-    --foreground: 210 40% 98%;
+    /* Material Design 3 Color System - Light Theme */
+    --background: 252 8% 98%;
+    --foreground: 231 12% 12%;
 
-    --card: 220 15% 10%;
-    --card-foreground: 210 40% 98%;
+    --card: 255 100% 100%;
+    --card-foreground: 231 12% 12%;
 
-    --popover: 220 15% 10%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 255 100% 100%;
+    --popover-foreground: 231 12% 12%;
 
-    --primary: 195 100% 60%;
-    --primary-foreground: 220 15% 8%;
+    --primary: 258 89% 66%;
+    --primary-foreground: 255 100% 100%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 231 12% 87%;
+    --secondary-foreground: 231 12% 12%;
 
-    --muted: 220 15% 12%;
-    --muted-foreground: 220 10% 65%;
+    --muted: 231 12% 95%;
+    --muted-foreground: 231 7% 46%;
 
-    --accent: 280 100% 70%;
-    --accent-foreground: 220 15% 8%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 255 100% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 255 100% 100%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 15%;
-    --ring: 195 100% 60%;
+    --border: 231 12% 87%;
+    --input: 231 12% 95%;
+    --ring: 258 89% 66%;
 
-    /* Energy theme colors */
-    --energy: 120 100% 50%;
-    --energy-foreground: 220 15% 8%;
+    /* Material Design 3 Surface Colors */
+    --surface: 255 100% 100%;
+    --surface-variant: 231 12% 95%;
+    --surface-container: 231 12% 93%;
+    --surface-container-high: 231 8% 91%;
+    --surface-container-highest: 231 8% 90%;
+
+    /* Energy theme colors - Material 3 Style */
+    --energy: 142 76% 36%;
+    --energy-foreground: 255 100% 100%;
     
-    --water: 200 100% 60%;
-    --water-foreground: 220 15% 8%;
+    --water: 207 90% 54%;
+    --water-foreground: 255 100% 100%;
 
-    /* Futuristic gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(195 100% 60%), hsl(280 100% 70%));
-    --gradient-energy: linear-gradient(135deg, hsl(120 100% 50%), hsl(195 100% 60%));
-    --gradient-water: linear-gradient(135deg, hsl(200 100% 60%), hsl(220 100% 70%));
-    --gradient-bg: linear-gradient(180deg, hsl(220 15% 8%), hsl(220 15% 6%));
+    /* Material Design 3 gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(258 89% 66%), hsl(289 85% 70%));
+    --gradient-energy: linear-gradient(135deg, hsl(142 76% 36%), hsl(178 60% 50%));
+    --gradient-water: linear-gradient(135deg, hsl(207 90% 54%), hsl(234 89% 74%));
+    --gradient-bg: linear-gradient(180deg, hsl(252 8% 98%), hsl(240 5% 96%));
     
-    /* Glow effects */
-    --glow-primary: 0 0 30px hsl(195 100% 60% / 0.3);
-    --glow-energy: 0 0 20px hsl(120 100% 50% / 0.4);
-    --glow-water: 0 0 20px hsl(200 100% 60% / 0.4);
+    /* Material elevation shadows */
+    --elevation-1: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    --elevation-2: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+    --elevation-3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+    --elevation-4: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
 
-    --radius: 1rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -75,33 +83,48 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Material Design 3 Color System - Dark Theme */
+    --background: 231 12% 6%;
+    --foreground: 231 12% 88%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 231 12% 10%;
+    --card-foreground: 231 12% 88%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 231 12% 10%;
+    --popover-foreground: 231 12% 88%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 264 83% 79%;
+    --primary-foreground: 231 12% 6%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 231 12% 20%;
+    --secondary-foreground: 231 12% 88%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 231 12% 15%;
+    --muted-foreground: 231 7% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 166 67% 64%;
+    --accent-foreground: 231 12% 6%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 231 12% 6%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 231 12% 20%;
+    --input: 231 12% 15%;
+    --ring: 264 83% 79%;
+
+    /* Material Design 3 Surface Colors - Dark */
+    --surface: 231 12% 10%;
+    --surface-variant: 231 12% 15%;
+    --surface-container: 231 12% 12%;
+    --surface-container-high: 231 8% 15%;
+    --surface-container-highest: 231 8% 18%;
+
+    /* Energy theme colors - Dark Mode */
+    --energy: 166 67% 64%;
+    --energy-foreground: 231 12% 6%;
+    
+    --water: 207 90% 74%;
+    --water-foreground: 231 12% 6%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
