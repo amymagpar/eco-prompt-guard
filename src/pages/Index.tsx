@@ -73,33 +73,52 @@ const Index = () => {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Features Section */}
-      <section className="py-24 px-6">
-        <div className="container mx-auto">
+      {/* Features Section with vibrant gradient background */}
+      <section className="py-24 px-6 relative overflow-hidden bg-gradient-to-br from-yellow-400 via-green-400 to-blue-500">
+        {/* Dynamic background elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-orange-400 rounded-full opacity-60 -translate-x-32 -translate-y-32 blur-3xl animate-float" />
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-400 rounded-full opacity-50 translate-x-24 translate-y-24 blur-2xl" />
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-pink-400 rounded-full opacity-40 blur-xl animate-pulse" />
+        
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-20">
-            <div className="bg-surface shadow-elevation-1 rounded-full px-6 py-3 inline-flex items-center mb-6">
-              <Brain className="w-5 h-5 mr-3 text-primary" />
-              <span className="text-primary font-medium">Smart Efficiency Features</span>
+            <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-3 inline-flex items-center mb-6">
+              <Brain className="w-5 h-5 mr-3 text-gray-800" />
+              <span className="text-gray-800 font-medium">Smart Efficiency Features</span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 text-foreground">
-              Intelligent by Design,
+            <h2 className="text-5xl md:text-6xl font-bold mb-8 text-gray-900">
+              Get Started with
               <br />
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Sustainable by Nature
+              <span className="text-gray-800">
+                EcoAI Pro
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Every feature is designed to maximize your productivity while minimizing environmental impact.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Discover intelligent features designed to maximize productivity while minimizing environmental impact through sustainable AI practices.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {features.map((feature, index) => (
-              <EfficiencyCard
+              <div 
                 key={index}
-                {...feature}
-                onInteract={() => console.log(`Interacting with ${feature.title}`)}
-              />
+                className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 hover:bg-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-white/50"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white mr-3">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
+                </div>
+                <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                  {feature.description}
+                </p>
+                <div className="flex items-center justify-between">
+                  <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200">
+                    {feature.efficiency}% efficient
+                  </Badge>
+                </div>
+              </div>
             ))}
           </div>
         </div>
