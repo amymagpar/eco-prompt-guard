@@ -29,31 +29,31 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-bg">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-energy/10 rounded-full blur-2xl animate-glow-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-cyan-500/30 rounded-full blur-2xl animate-glow-pulse" style={{ animationDelay: '1s' }} />
       </div>
 
       <div className="container mx-auto px-8 relative z-10">
         <div className="text-center max-w-6xl mx-auto">
           {/* Product badge */}
-          <div className="bg-surface shadow-elevation-1 rounded-full px-8 py-4 inline-flex items-center mb-8 animate-float">
-            <Sparkles className="w-5 h-5 mr-3 text-primary" />
-            <span className="text-primary font-semibold text-lg">Commons - Sustainable Intelligence</span>
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-8 py-4 inline-flex items-center mb-8 animate-float">
+            <Sparkles className="w-5 h-5 mr-3 text-white" />
+            <span className="text-white font-semibold text-lg">Commons - Sustainable Intelligence</span>
           </div>
 
           {/* Main heading */}
-          <h1 className="text-6xl md:text-8xl font-bold mb-10 bg-gradient-primary bg-clip-text text-transparent leading-tight">
+          <h1 className="text-6xl md:text-8xl font-bold mb-10 text-white leading-tight">
             AI That Cares
             <br />
-            <span className="text-4xl md:text-6xl">About Tomorrow</span>
+            <span className="text-4xl md:text-6xl bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">About Tomorrow</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-2xl md:text-3xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
             The world's first energy-conscious AI that trains you to be more efficient while delivering exceptional results.
           </p>
 
