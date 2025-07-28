@@ -90,7 +90,7 @@ const Index = () => {
               Get Started with
               <br />
               <span className="text-gray-800">
-                EcoAI Pro
+                Commons
               </span>
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
