@@ -72,24 +72,9 @@ export const EfficiencyCard = ({
         <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors">
           {title}
         </h3>
-        <p className="text-muted-foreground mb-6 leading-relaxed">
+        <p className="text-muted-foreground leading-relaxed">
           {description}
         </p>
-        
-        {interactive && (
-          <Button 
-            variant="ghost" 
-            size="sm" 
-            className={`group/btn transition-all duration-300 rounded-full px-6 py-3 ${
-              isActive ? 'text-primary bg-primary/10' : 'hover:bg-surface-variant'
-            }`}
-          >
-            {isActive ? 'View Details' : 'Try Feature'}
-            <ChevronRight className={`w-5 h-5 ml-2 transition-transform duration-300 ${
-              isActive ? 'translate-x-1' : 'group-hover/btn:translate-x-1'
-            }`} />
-          </Button>
-        )}
       </div>
 
       {/* Subtle state indicator */}
