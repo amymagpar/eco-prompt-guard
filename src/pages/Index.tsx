@@ -1,6 +1,7 @@
 import { HeroSection } from '@/components/HeroSection';
 import { EfficiencyCard } from '@/components/EfficiencyCard';
 import { EnergyMeter } from '@/components/EnergyMeter';
+import { BatchProcessor } from '@/components/BatchProcessor';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { 
@@ -18,11 +19,11 @@ import {
 } from 'lucide-react';
 
 // Import feature images
-import promptCoachingImg from '@/assets/prompt-coaching.jpg';
-import progressiveResponsesImg from '@/assets/progressive-responses.jpg';
-import liveImpactMeterImg from '@/assets/live-impact-meter.jpg';
+import promptCoachingImg from '/lovable-uploads/4608aa34-eb07-4244-a0cf-6fd0d0de133b.png';
+import progressiveResponsesImg from '/lovable-uploads/093a0c12-bab7-4129-b3f9-5ff7202f068a.png';
+import liveImpactMeterImg from '/lovable-uploads/cf4f02dd-8085-4ccf-a701-47e446340b16.png';
 import batchModeImg from '@/assets/batch-mode.jpg';
-import offPeakIncentivesImg from '@/assets/off-peak-incentives.jpg';
+import offPeakIncentivesImg from '/lovable-uploads/37c2aad2-1df8-483c-bc5d-512bd29299c7.png';
 
 const Index = () => {
   const features = [
@@ -104,20 +105,33 @@ const Index = () => {
                 key={index}
                 className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 hover:bg-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-white/50"
               >
-                <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white mr-3">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
-                </div>
-                <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                  {feature.description}
-                </p>
-                <div className="flex items-center justify-between">
-                  <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200">
-                    {feature.efficiency}% efficient
-                  </Badge>
-                </div>
+                {feature.title === "Batch Processing" ? (
+                  <BatchProcessor data-id={`batch-${index}`} />
+                ) : (
+                  <>
+                    <div className="flex items-center mb-4">
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white mr-3">
+                        {feature.icon}
+                      </div>
+                      <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
+                    </div>
+                    <div className="mb-4 rounded-lg overflow-hidden">
+                      <img 
+                        src={feature.image} 
+                        alt={feature.title}
+                        className="w-full h-32 object-cover"
+                      />
+                    </div>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                      {feature.description}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200">
+                        {feature.efficiency}% efficient
+                      </Badge>
+                    </div>
+                  </>
+                )}
               </div>
             ))}
           </div>
