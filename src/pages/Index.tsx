@@ -26,7 +26,7 @@ import batchModeImg from '@/assets/batch-mode.jpg';
 import offPeakIncentivesImg from '/lovable-uploads/37c2aad2-1df8-483c-bc5d-512bd29299c7.png';
 
 const Index = () => {
-  const features = [
+  const alternatingFeatures = [
     {
       title: "Prompt Coaching",
       description: "AI analyzes your prompts before processing and suggests more efficient alternatives that deliver better results.",
@@ -41,14 +41,6 @@ const Index = () => {
       image: progressiveResponsesImg,
       efficiency: 55,
       icon: <BarChart3 className="w-6 h-6" />,
-      interactive: true
-    },
-    {
-      title: "Live Impact Meter",
-      description: "Real-time visualization of energy and water consumption with tangible comparisons to everyday activities.",
-      image: liveImpactMeterImg,
-      efficiency: 30,
-      icon: <TrendingUp className="w-6 h-6" />,
       interactive: true
     },
     {
@@ -68,6 +60,15 @@ const Index = () => {
       interactive: true
     }
   ];
+
+  const liveImpactFeature = {
+    title: "Live Impact Meter",
+    description: "Real-time visualization of energy and water consumption with tangible comparisons to everyday activities.",
+    image: liveImpactMeterImg,
+    efficiency: 30,
+    icon: <TrendingUp className="w-6 h-6" />,
+    interactive: true
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -99,41 +100,71 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {features.map((feature, index) => (
+          {/* Alternating Features Layout */}
+          <div className="space-y-16 max-w-7xl mx-auto">
+            {alternatingFeatures.map((feature, index) => (
               <div 
                 key={index}
-                className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 hover:bg-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-white/50"
+                className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}
               >
-                {feature.title === "Batch Processing" ? (
-                  <BatchProcessor data-id={`batch-${index}`} />
-                ) : (
-                  <>
-                    <div className="flex items-center mb-4">
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white mr-3">
+                <div className="lg:w-1/2">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 hover:bg-white transition-all duration-300 hover:shadow-xl border border-white/50">
+                    <div className="flex items-center mb-6">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white mr-4">
                         {feature.icon}
                       </div>
-                      <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
+                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
                     </div>
-                    <div className="mb-4 rounded-lg overflow-hidden">
+                    <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+                      {feature.description}
+                    </p>
+                    <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200 text-base px-4 py-2">
+                      {feature.efficiency}% efficient
+                    </Badge>
+                  </div>
+                </div>
+                <div className="lg:w-1/2">
+                  {feature.title === "Batch Processing" ? (
+                    <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 border border-white/50">
+                      <BatchProcessor data-id={`batch-${index}`} />
+                    </div>
+                  ) : (
+                    <div className="rounded-2xl overflow-hidden shadow-xl">
                       <img 
                         src={feature.image} 
                         alt={feature.title}
-                        className="w-full h-32 object-cover"
+                        className="w-full h-80 object-cover"
                       />
                     </div>
-                    <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                      {feature.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200">
-                        {feature.efficiency}% efficient
-                      </Badge>
-                    </div>
-                  </>
-                )}
+                  )}
+                </div>
               </div>
             ))}
+          </div>
+
+          {/* Live Impact Meter - Full Width Section */}
+          <div className="mt-24 max-w-7xl mx-auto">
+            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-12 border border-white/50 text-center">
+              <div className="flex items-center justify-center mb-8">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white mr-6">
+                  {liveImpactFeature.icon}
+                </div>
+                <h3 className="text-4xl font-bold text-gray-900">{liveImpactFeature.title}</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed mb-8 text-xl max-w-3xl mx-auto">
+                {liveImpactFeature.description}
+              </p>
+              <div className="rounded-2xl overflow-hidden shadow-2xl mb-8">
+                <img 
+                  src={liveImpactFeature.image} 
+                  alt={liveImpactFeature.title}
+                  className="w-full h-96 object-cover"
+                />
+              </div>
+              <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200 text-lg px-6 py-3">
+                {liveImpactFeature.efficiency}% efficient
+              </Badge>
+            </div>
           </div>
         </div>
       </section>
