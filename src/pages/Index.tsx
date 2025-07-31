@@ -105,10 +105,10 @@ const Index = () => {
             {alternatingFeatures.map((feature, index) => (
               <div 
                 key={index}
-                className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}
+                className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-stretch gap-0`}
               >
-                <div className="lg:w-1/2">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 hover:bg-white transition-all duration-300 hover:shadow-xl border border-white/50">
+                <div className="lg:w-1/2 flex items-center">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-l-2xl lg:rounded-r-none rounded-r-2xl p-8 hover:bg-white transition-all duration-300 hover:shadow-xl border border-white/50 h-full w-full flex flex-col justify-center">
                     <div className="flex items-center mb-6">
                       <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white mr-4">
                         {feature.icon}
@@ -118,22 +118,22 @@ const Index = () => {
                     <p className="text-gray-700 leading-relaxed mb-6 text-lg">
                       {feature.description}
                     </p>
-                    <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200 text-base px-4 py-2">
+                    <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200 text-base px-4 py-2 w-fit">
                       {feature.efficiency}% efficient
                     </Badge>
                   </div>
                 </div>
-                <div className="lg:w-1/2">
+                <div className="lg:w-1/2 flex items-stretch">
                   {feature.title === "Batch Processing" ? (
-                    <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 border border-white/50">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-r-2xl lg:rounded-l-none rounded-l-2xl p-4 border border-white/50 w-full flex items-center">
                       <BatchProcessor data-id={`batch-${index}`} />
                     </div>
                   ) : (
-                    <div className="rounded-2xl overflow-hidden shadow-xl">
+                    <div className="rounded-r-2xl lg:rounded-l-none rounded-l-2xl overflow-hidden shadow-xl w-full">
                       <img 
                         src={feature.image} 
                         alt={feature.title}
-                        className="w-full h-80 object-cover"
+                        className="w-full h-full object-contain bg-gray-900"
                       />
                     </div>
                   )}
@@ -158,7 +158,7 @@ const Index = () => {
                 <img 
                   src={liveImpactFeature.image} 
                   alt={liveImpactFeature.title}
-                  className="w-full h-96 object-cover"
+                  className="w-full h-64 object-contain bg-gray-900"
                 />
               </div>
               <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200 text-lg px-6 py-3">
@@ -290,7 +290,7 @@ const Index = () => {
                 size="lg" 
                 className="bg-surface hover:bg-surface/90 text-foreground shadow-elevation-3 px-8 py-4 text-lg font-semibold rounded-full"
               >
-                Start Free Trial
+                Use Commons
               </Button>
               <Button 
                 size="lg" 

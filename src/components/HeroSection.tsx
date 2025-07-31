@@ -82,18 +82,37 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Live demo meter */}
-          <div className="bg-surface shadow-elevation-2 rounded-3xl p-8 mb-12 max-w-lg mx-auto">
-            <div className="text-lg text-muted-foreground mb-6">Live Resource Monitor</div>
-            <EnergyMeter 
-              energyValue={energyValue} 
-              waterValue={waterValue} 
-              isActive={isSimulating}
-            />
+          {/* Live demo meter with two-column layout */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="text-lg text-muted-foreground mb-6 text-center">Live Resource Monitor</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-surface shadow-elevation-2 rounded-3xl p-8">
+                <div className="flex items-center justify-center mb-6">
+                  <Zap className="w-8 h-8 text-energy mr-3" />
+                  <h3 className="text-xl font-semibold">Energy Usage</h3>
+                </div>
+                <EnergyMeter 
+                  energyValue={energyValue} 
+                  waterValue={0} 
+                  isActive={isSimulating}
+                />
+              </div>
+              <div className="bg-surface shadow-elevation-2 rounded-3xl p-8">
+                <div className="flex items-center justify-center mb-6">
+                  <Droplets className="w-8 h-8 text-water mr-3" />
+                  <h3 className="text-xl font-semibold">Water Usage</h3>
+                </div>
+                <EnergyMeter 
+                  energyValue={0} 
+                  waterValue={waterValue} 
+                  isActive={isSimulating}
+                />
+              </div>
+            </div>
           </div>
 
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
+          {/* CTA button */}
+          <div className="flex justify-center items-center mb-20">
             <Button 
               size="lg" 
               className="bg-gradient-primary shadow-elevation-3 px-10 py-5 text-xl font-semibold rounded-full transition-all duration-300 hover:shadow-elevation-4 hover:scale-105"
